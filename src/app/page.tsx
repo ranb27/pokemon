@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Card from "@/app/components/Card";
 import Select from "@/app/components/Select";
 import axios from "axios";
