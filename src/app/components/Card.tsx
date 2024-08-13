@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Pokemon {
   name: string;
@@ -14,9 +15,11 @@ export default function Card({ pokemon }: { pokemon: Pokemon }) {
     <>
       <div className="card bg-base-100 shadow-xl hover:scale-105 duration-200">
         <figure className="p-4">
-          <img
+          <Image
             src={pokemon.image}
             alt={pokemon.name}
+            width={200} // Set an appropriate width for the image
+            height={150} // Set an appropriate height for the image
             className="object-cover"
           />
         </figure>

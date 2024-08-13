@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
+import Image from "next/image";
 
 interface Pokemon {
   name: string;
@@ -92,9 +93,11 @@ function Page({ params }: { params: { slug: string } }) {
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 animate-fade">
-            <img
+            <Image
               src={pokemonDetails.image}
               alt={pokemonDetails.name}
+              width={300} // Set the width of the image
+              height={300} // Set the height of the image
               className="object-cover w-1/2 my-auto mx-auto animate-floating"
             />
 
