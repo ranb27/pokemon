@@ -20,7 +20,7 @@ interface Pokemon {
   speed: number;
 }
 
-function page({ params }: { params: { slug: string } }) {
+function Page({ params }: { params: { slug: string } }) {
   console.log("params", params);
 
   //! State
@@ -169,4 +169,4 @@ function page({ params }: { params: { slug: string } }) {
   );
 }
 
-export default page;
+export default Page;
