@@ -46,6 +46,8 @@ function Page({ params }: { params: { slug: string } }) {
   });
   //! Fetch
   useEffect(() => {
+    if (!params.slug) return;
+
     setLoading(true);
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${params.slug}`)
@@ -71,7 +73,7 @@ function Page({ params }: { params: { slug: string } }) {
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  }, []);
+  }, [params.slug]);
 
   //! Function
 
